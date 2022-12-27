@@ -1,0 +1,89 @@
+How to Send Email Notifications with Strapi and Mailchimp?
+
+Strapi is a content management system (CMS) that makes it easy to create, manage, and distribute content. With Strapi, you can quickly create custom email notifications and send them to your customers. Mailchimp is an email marketing platform that simplifies the process of managing and sending email campaigns. By combining Strapi and Mailchimp, you can easily create and send email notifications to your customers. 
+
+The first step in setting up email notifications with Strapi and Mailchimp is to create a Mailchimp account. You can do this in a few minutes by visiting the Mailchimp website and signing up for an account. Once you’ve created your account, you’ll need to create a list of contacts. You can do this by importing a CSV file or manually entering a list of contacts into Mailchimp.
+The next step is to connect Strapi and Mailchimp. This is done through a Mailchimp API key. You can find your API key in the Mailchimp account settings. Once you’ve got your API key, you’ll need to add it to your Strapi settings. 
+This can be done in the administration panel of the Strapi dashboard. Once you’ve connected Strapi and Mailchimp, you’re ready to start creating email notifications. You can do this in the Strapi CMS by creating a template for your email notifications. You can customize the template however you want, adding images, text, and links. 
+You can also set up rules to determine when the email notifications should be sent out. The last step is to send the email notifications. This is done through the Mailchimp account. You can create a campaign in Mailchimp and add the template you created in Strapi. You can also add a list of contacts to the campaign and set up rules for delivery. 
+Once the campaign is set up, you can send the email notifications with a single click. By combining Strapi and Mailchimp, you can easily set up and manage email notifications for your customers. The process is straightforward and doesn’t require any coding knowledge. With just a few clicks, you can create custom email notifications and send them out to your customers. This is a great way to stay in touch with your customers and keep them up to date on your products and services.
+Prerequisites 
+ 1. A Strapi instance set up and running
+2. A Mailchimp account with an API key
+3. An understanding of Strapi and Mailchimp APIs
+4. Node.js and npm installed
+5. The nodemailer package installed
+
+Setup
+Strapi Setup
+To install Strapi, use the following command:
+
+ 
+Once installed with the above command, Strapi will run on http://localhost:1337.
+Create an admin account by signing up.
+
+ 
+
+Congrats! Your Strapi has been installed and ready to go.
+
+Node JS and Nodemailer Setup
+The following steps will install the Node.js and npm on your machine.
+1. Download Node.js from the official website (https://nodejs.org/en/download/).
+2. Install the downloaded file. 
+3. Open a command prompt and type the following command to verify that Node.js has been installed correctly:
+ 
+4. To install npm, type the following command in the command prompt:
+ 
+5. To verify that the installation was successful, type the following command in the command prompt to check the version of npm:
+ 
+
+Mailchimp and Strapi Integration
+1. Create a Mailchimp API Key: 
+Log in to the Mailchimp dashboard and navigate to the Account page.
+Click on the Extras tab in the left navigation menu and select API keys.
+Click the Create A Key button to generate a new API key.
+ 
+
+2. Install Mailchimp Plugin: 
+Run the command below to install the Mailchimp plugin in your Strapi project
+
+ 
+3. Configure Mailchimp Plugin: 
+Unfortunately, there is no native support for Mailchimp in Strapi v4. You will need to use a custom plugin to integrate Mailchimp with Strapi. You can find a few solutions online and choose the one that best fits your needs. Here is a tutorial on how to set up Mailchimp with Strapi v4 using a custom plugin.
+
+1. Once you Install the Mailchimp plugin proceed with the following procedure.
+
+2. Configure the Mailchimp plugin:
+
+Once the plugin is installed, you need to configure it. Open the plugin configuration file in the /config/plugins.js folder and add the following configurations:
+ 
+Replace the MAILCHIMP_API_KEY and MAILCHIMP_LIST_ID with your own Mailchimp API key and list ID.
+
+3. Connect to the Mailchimp API:
+
+Next, you need to connect to the Mailchimp API. To do this, you need to create a new controller in the /controllers folder. Create a new file called MailchimpController.js and add the following code:
+ 
+ 
+4. Create a route to subscribe users:
+
+Finally, you need to create a route that will allow users to subscribe to your Mailchimp list. To do this, create a new file called mailchimp.js in the /config/routes folder and add the following code:
+ 
+Now, you can use the /mailchimp/subscribe route to subscribe users to your Mailchimp list.
+
+That's it! You have successfully set up Mailchimp with Strapi v4.
+
+Create a Mailchimp List: 
+Log in to the Mailchimp dashboard and navigate to the Lists page.
+Click the Create List button and fill out the list details.
+
+6. Configure List Settings: 
+Navigate to the Settings page of the newly created list and configure the list settings.
+
+7. Add a Subscription Form to Your Website: 
+Copy the Mailchimp Subscription form code and add it to your website.
+
+8. Test Subscription Form: 
+Fill out the subscription form and submit it to ensure the data is being sent to Mailchimp.
+
+
+
